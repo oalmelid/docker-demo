@@ -32,5 +32,5 @@ if __name__ == "__main__":
 
     print(f"Intersecting {args.bed_files}")
     intersection = intersect(peaks)
-    print(f"Done, writing output to {args.output}")
+    print(f"Done, writing output to {args.output.name}")
     intersection.to_bed(args.output)
