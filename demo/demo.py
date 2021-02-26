@@ -30,5 +30,7 @@ if __name__ == "__main__":
         print(f"Failed to import file: {e}")
         exit(1)
 
+    print(f"Intersecting {args.bed_files}")
     intersection = intersect(peaks)
+    print(f"Done, writing output to {args.output}")
     intersection.to_bed(args.output)
