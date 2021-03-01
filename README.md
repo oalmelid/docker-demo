@@ -6,7 +6,7 @@ This is a small demo repository, intended to show how one can build, package and
 
 ### Python code
 
-The python code in [demo/](demo/) and [test/](test/) has been built and managed using python's poetry framework. It can be built and installed using the commands `poetry build` and `poetry install --no-dev`. The script in [demo/demo.py] will take two or more bedfiles as input, and write their intersection to a file.
+The python code in [demo/](demo/) and [test/](test/) has been built and managed using python's poetry framework. It can be built and installed using the commands `poetry build` and `poetry install --no-dev`. The script in [demo/demo.py](demo/demo.py) will take two or more bedfiles as input, and write their intersection to a file.
 
 ### The Dockerfile
 
