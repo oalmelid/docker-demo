@@ -6,14 +6,15 @@ This is a small demo repository, intended to show how one can build, package and
 
 ### Python code
 
-The python code in [demo/](demo/) and [test/](test/) has been built and managed using python's poetry framework. It can be built and installed using the commands `poetry build` and `poetry install --no-dev`. The script in [demo/demo.py] will take two or more bedfiles as input, and write their intersection to a file.
+The script in [demo/demo.py] will take two or more bedfiles as input, and write their intersection to a file.
+A single unit test can be found in the test directory.
+The test_data directory contains two input files and their expected result.
 
 ### The Dockerfile
 
 The Dockerfile does the following things
 
 - Fetches the pre-built python:3.8 container from the docker hub and builds on top of it
-- Installs poetry into the container
 - Copies the entire contents of this repository into the directory `/src/` within the container
 - Sets the working directory to `/src/`
 - Installs the project and its dependencies
@@ -39,6 +40,8 @@ Then change directory to the newly cloned docker-demo repository and run
 ```bash
 docker build . -t <choose-your-own-container-name>
 ```
+The above command causes docker to read the Dockerfile in the current directory (the `.` above references the current directory). Docker then pulls the `python:3.8` container and executes the provided commands inside of it. At the end, docker stores a container image in your local cache for further use.
+
 You should be able to list your built and downloaded containers by running
 ```bash
 docker images
