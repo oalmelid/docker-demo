@@ -6,7 +6,7 @@ This is a small demo repository, intended to show how one can build, package and
 
 ### Python code
 
-The script in [demo/demo.py] will take two or more bedfiles as input, and write their intersection to a file.
+The script in [demo/demo.py](demo/demo.py) will take two or more bedfiles as input, and write their intersection to a file.
 A single unit test can be found in the test directory.
 The test_data directory contains two input files and their expected result.
 
@@ -24,7 +24,7 @@ This creates a container which, when run, will run the demo script. The containe
 
 ## Requirements
 - To build this locally on your computer, you will need to install [docker](https://www.docker.com/get-started)
-- A (docker hub)[https://hub.docker.com/] account is required to create a repository and push your image to it.
+- A [docker hub](https://hub.docker.com/) account is required to create a repository and push your image to it.
 - The final run on the compute cluster assumes you have access to [singularity](https://singularity.lbl.gov/), which you would need to get installed on your compute infrastructure.
 
 ## Usage
@@ -78,7 +78,7 @@ docker run <docker-hub-repository>:<tag>
 And use flags and file inputs/outputs as needed.
 
 ### Running the container on eddie with singularity
-This step is only intended for users on the university of edinburgh eddie compute cluster, though should be broadly applicable to anyone using singularity. Substitute directories and module names as appropriate if you are not working on eddie.
+This step is only intended for users on the university of the Edinburgh eddie compute cluster, though should be broadly applicable to anyone using singularity. Substitute directories and module names as appropriate if you are not working on eddie.
 
 Like many HPC clusters, eddie does not permit the use of docker, since the docker daemon has root privileges and can be used for privilege escalation attacks. The singularity container engine provides many of the same features as docker, but runs with the privileges of the scheduling user and hence is preferred by many HPC users. Singularity also supports MPI, which can be useful in an HPC environment.
 
