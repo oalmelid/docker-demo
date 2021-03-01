@@ -23,7 +23,7 @@ This creates a container which, when run, will run the demo script. The containe
 
 ## Requirements
 - To build this locally on your computer, you will need to install [docker](https://www.docker.com/get-started)
-- A (docker hub)[https://hub.docker.com/] account is required to create a repository and push your image to it.
+- A [docker hub](https://hub.docker.com/) account is required to create a repository and push your image to it.
 - The final run on the compute cluster assumes you have access to [singularity](https://singularity.lbl.gov/), which you would need to get installed on your compute infrastructure.
 
 ## Usage
