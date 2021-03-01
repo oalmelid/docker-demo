@@ -75,7 +75,7 @@ docker run <docker-hub-repository>:<tag>
 And use flags and file inputs/outputs as needed.
 
 ### Running the container on eddie with singularity
-This step is only intended for users on the university of edinburgh eddie compute cluster, though should be broadly applicable to anyone using singularity. Substitute directories and module names as appropriate if you are not working on eddie.
+This step is only intended for users on the university of the Edinburgh eddie compute cluster, though should be broadly applicable to anyone using singularity. Substitute directories and module names as appropriate if you are not working on eddie.
 
 Like many HPC clusters, eddie does not permit the use of docker, since the docker daemon has root privileges and can be used for privilege escalation attacks. The singularity container engine provides many of the same features as docker, but runs with the privileges of the scheduling user and hence is preferred by many HPC users. Singularity also supports MPI, which can be useful in an HPC environment.
 
