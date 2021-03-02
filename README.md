@@ -16,7 +16,6 @@ The Dockerfile does the following things
 
 - Fetches the pre-built python:3.8 container from the docker hub and builds on top of it
 - Copies the entire contents of this repository into the directory `/src/` within the container
-- Sets the working directory to `/src/`
 - Installs the project and its dependencies
 - Sets the newly created container's entrypoint to run `/src/demo/demo.py`
 
