@@ -71,7 +71,7 @@ docker push <docker-hub-repository>:<tag>
 You can choose the tag name yourself. It's conventional for the tag name latest to correspond to the most recent commit on the main branch of your code repository.
 
 ### Running the container elsewhere with docker
-After pushing the container, it can be run from anywhhere, simply by referencing the tag you pushed to the Docker hub. Simply run
+After pushing the container, it can be run from anywhere, simply by referencing the tag you pushed to the Docker hub. Simply run
 ```bash
 docker run <docker-hub-repository>:<tag>
 ```
@@ -80,7 +80,7 @@ And use flags and file inputs/outputs as needed.
 ### Running the container on eddie with singularity
 This step is only intended for users on the university of the Edinburgh eddie compute cluster, though should be broadly applicable to anyone using singularity. Substitute directories and module names as appropriate if you are not working on eddie.
 
-Like many HPC clusters, eddie does not permit the use of docker, since the docker daemon has root privileges and can be used for privilege escalation attacks. The singularity container engine provides many of the same features as docker, but runs with the privileges of the scheduling user and hence is preferred by many HPC users. Singularity also supports MPI, which can be useful in an HPC environment.
+Like many HPC clusters, eddie does not permit the use of docker, since the docker daemon has root privileges and can be used for privilege escalation attacks. The singularity container engine provides many of the same features as docker, but runs with the privileges of the scheduling user and hence is preferred by many HPC administrators. Singularity also supports MPI, which can be useful in an HPC environment.
 
 Singularity will download and cache container images, so it's important to make sure this cache is stored somewhere with plenty of space. To do so, set the `SINGULARITY_CACHEDIR` environment variable.
 ```bash
@@ -96,4 +96,4 @@ Finally, grab some bed files you want to intersect, put them in your current wor
 ```bash
 singularity run docker://<docker-hub-repository>:<tag> <input_file1> <input_file2> <output_file>
 ```
-Note that singularity automatically mounts the current working directory and CDs to it, so you don't have to pass mount flags to it like you did with docker.
+Note that singularity automatically mounts the current working directory and runs your container command from it, so you don't have to pass mount flags like you did with docker.
